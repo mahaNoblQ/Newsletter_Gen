@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from newslettercrew import NewsletterGenCrew
+from newsletter_gen.newslettercrew import NewsletterGenCrew
 import os
 
 def load_html_template():
@@ -11,6 +11,7 @@ def load_html_template():
 def run():  
     inputs = {
         "topic": input("Enter the topic: "),
+        "personal_message": input("Enter the newsletter Personal message: "),
         "html_template": load_html_template(),
     }
     NewsletterGenCrew().crew().kickoff(inputs=inputs)
